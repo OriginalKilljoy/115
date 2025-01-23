@@ -1,0 +1,144 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+div.page{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 2fr 10fr 1fr;
+    grid-template-areas:
+    'header header'
+    'menu mainContent'
+    'footer footer';
+}
+
+div.header{
+    background-color: #352f44;
+    color: #efecec;
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 400%;
+    font-family:monospace;
+}
+
+div.menu{
+    background-color: #5c5470;
+    color: #efecec;
+    grid-area: menu;
+    font-size: 200%;
+    font-family:monospace;
+    padding: 10px;
+}
+
+div.mainContent{
+    background-color: #dbd8e3;
+    grid-area: mainContent;
+    padding: 5px;
+    padding-left: 20px;
+    font-family:monospace;
+}
+
+div.footer{
+    background-color: #352f44;
+    color: #efecec;
+    grid-area: footer;
+    font-size: 200%;
+    font-family:monospace;
+    padding: 10px;
+}
+
+.b{
+    display: grid;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #352f44;
+    background-color: #f6f5f5;
+    border-radius: 5px;
+    padding: 2px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    'number button1'
+    'number button2';
+}
+
+.button1{
+    grid-area: button1;
+    margin: 2px;
+    border: 1px solid #352f44;
+    border-radius: 3px;
+}
+
+.button2{
+    grid-area: button2;
+    margin: 2px;
+    border: 1px solid #352f44;
+    border-radius: 3px;
+}
+
+.number{
+    grid-area: number;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+}
+
+.c{
+    display: grid;
+    grid-template-areas: 'labels input';
+    width: 400px;
+    height: 200px;
+    padding-top: 10px;
+    border: 2px solid #352f44;
+    background-color: #f6f5f5;;
+    border-radius: 10px;
+    font-size: large;
+}
+
+.labels{
+    display: flex;
+    justify-content: end;
+    padding-right: 10px;
+    text-align: end;
+    align-items: center;
+
+    line-height: 25px;
+}
+
+.inputs{
+    line-height: 25px;
+    padding-top: 10px;
+}
+
+.language-label{
+    display: flex;
+    justify-content: end;
+    padding-right: 10px;
+    text-align: end;
+}
+
+input{
+    background-color: #dbd8e3;
+    border: 1px solid #352f44;
+    border-radius: 5px;
+}
+
+
+@media only screen and (max-width:600px){
+    div.page{
+        display: grid;
+        height: 99vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20px 1fr 4fr 20px;
+        grid-template-areas:
+        'header'
+        'menu'
+        'mainContent'
+        'footer';
+    }
+}
